@@ -34,12 +34,16 @@ class Student:
     # TODO 5 define a method to enroll new course to student courses list
 
     # method to get_student_details as dict
-    def get_student_details(self):
-        return self.__dict__
+     def get_student_info(self):
+            return self.__dict__
 
     # method to get_student_courses
+    
     def get_student_courses(self):
-        # TODO 6 print student courses with their marks
+            for course in self.courses:
+                print(f"{course.name}: {course.mark}")):
+
+# TODO 6 print student courses with their marks
         pass
 
     # method to get student_average as a value
