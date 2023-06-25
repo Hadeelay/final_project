@@ -46,8 +46,12 @@ class Student:
 # TODO 6 print student courses with their marks
         pass
 
-    # method to get student_average as a value
+    # method to get_student_average 
     def get_student_average(self):
+            total_marks = 0
+            for course in self.courses:
+                total_marks += course.mark
+            return total_marks / len(self.courses)
         # TODO 7 return the student average
         pass
 
