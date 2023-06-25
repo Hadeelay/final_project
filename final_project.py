@@ -175,5 +175,7 @@ while True:
        print("Student Not Exist")
         
         # TODO 16 call a function to exit the program
+    else:
+        exit_program()
         pass
 
