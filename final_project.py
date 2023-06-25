@@ -106,10 +106,22 @@ while True:
     elif selection == 2:
         student_number = input("Enter Student Number")
         # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
+         target_student = None
+        for student in mystudents:
+            if student.number == student_number:
+                target_student = student
+                break
 
+        if target_student:
+            students.remove(target_student)
+            print("Student Deleted Successfully")
+        else:
+            print("Student Not Exist")
     elif selection == 3:
         student_number = input("Enter Student Number")
-        # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
+        
+    
+    # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
 
     elif selection == 4:
         student_number = input("Enter Student Number")
