@@ -122,9 +122,23 @@ while True:
         
     
     # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
+        target_student = None
+        for student in mystudents:
+            if student.number == student_number:
+                target_student = student
+                break
 
+        if target_student:
+            student_info = target_student.get_student_info()
+            print(f"Student Name: {student_info['name']}")
+            print(f"Student Age: {student_info['age']}")
+            print(f"Student Number: {student_info['number']}")
+            target_student.get_student_courses()
+        else:
+            print("Student Not Exist")
     elif selection == 4:
         student_number = input("Enter Student Number")
+        
         # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
 
     elif selection == 5:
