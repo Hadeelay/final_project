@@ -61,13 +61,17 @@ class Student:
 
 while True:
 
-    # TODO 9 handle Exception for selection input
-    selection = int(input("1.Add New Student\n"
-                          "2.Delete Student\n"
-                          "3.Display Student\n"
-                          "4.Get Student Average\n"
-                          "5.Add Course to student with mark.\n"
-                          "6.Exit"))
+    while True:
+    try:
+        selection = int(input("1.Add New Student\n"
+                              "2.Delete Student\n"
+                              "3.Display Student\n"
+                              "4.Get Student Average\n"
+                              "5.Add Course to student with mark.\n"
+                              "6.Exit"))
+    except ValueError:
+        print("Invalid input, please enter a number between 1 and 6.")
+        continue
 
     if selection == 1:
 
