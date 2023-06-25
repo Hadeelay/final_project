@@ -14,16 +14,23 @@ Delivery Date :25/6/2023
 
 class Student:
     # TODO 3 define static variable indicates total student count
+    class Student:
+    total_student = 0
+    def __init__(self, name):
+        self.name = name
+        Student.total_student += 1
 
-    # TODO 4 define a constructor which includes
-    # student_id (unique using uuid module)
-    # student_name (user input)
-    # student_age (user input)
-    # student_number (user_input)
-    # courses_list (List of Course Objects)
+    def __init__(self, name, age, number):
+        self.student_id = uuid.uuid4()
+        self.name = name
+        self.age = age
+        self.number = number
+        self.courses = []
     def __init__(self):
         pass
 
+     def enroll_course(self, course):
+            self.courses.append(course)
     # TODO 5 define a method to enroll new course to student courses list
 
     # method to get_student_details as dict
