@@ -77,14 +77,23 @@ while True:
 
         # TODO 10 make sure that Student number is not exists before
         student_number = input("Enter Student Number")
-
-        student_name = input("Enter Student Name")
-        while True:
-            try:
-                student_age = int(input("Enter Student Age"))
+        Is_existing_student = False
+        for student in students:
+            if student.number == student_number:
+                is_existing_student = True
                 break
-            except:
-                print("Invalid Value")
+
+        if is_existing_student:
+            print("Student with this number exists.")
+        else:
+            student_name = input("Enter Student Name")
+            while True:
+                try:
+                    student_age = int(input("Enter Student Age"))
+                    break
+                except:
+                    print("Invalid Value")
+
 
         # TODO 11 create student object and append it to students list
 
