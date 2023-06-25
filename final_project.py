@@ -97,7 +97,11 @@ while True:
 
         # TODO 11 create student object and append it to students list
 
-        print("Student Added Successfully")
+        student_courses = []
+            students.append(student)
+
+            print("Student Added Successfully")
+
 
     elif selection == 2:
         student_number = input("Enter Student Number")
